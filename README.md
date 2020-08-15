@@ -1,2 +1,2 @@
 # Whirlpool
-Content TBD
+Content TBD Launch Date 8/31
