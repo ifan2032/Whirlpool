@@ -2,6 +2,21 @@
 
 Staying Organized Amidst The Whirlpool of Life
 
+## Getting Started
+
+```
+pip install django
+```
+
+```
+cd desktop
+cd whirlpool
+cd whirlpool
+python manage.py runserver
+
+
+```
+
 ## VERSION 1.1.1 RELEASED 08/31/2020:
 
 Features:
