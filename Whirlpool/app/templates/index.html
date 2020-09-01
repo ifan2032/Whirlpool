@@ -1,13 +1,19 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block head %} 
-<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
 {% endblock %}
 
 {% block content %}
+	<div class="align-items-center">
+	    <div class="text-center">
+	        <h1 class="text-uppercase">WHIRLPOOL</h1>
+	        <h2>Staying Organized Admist the Whirlpool of Life</h2>
+	        <a href="{% url 'main' %}" class="btn btn-secondary" type="button"> Get Started </a>
 
- <h1> Does thsi work </h1>
-
- <h3> If Yes, that is awesome </h3>
-
+	    </div>
+	</div>
+ 
 {% endblock %}

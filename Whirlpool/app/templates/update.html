@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<script src="{% static 'js/main.js' %}"> </script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/update.css' %}">
+
+{% endblock %}
+
+
+{% block content %}
+
+	<h1> Update </h1>
+
+	<form name="add" action="" method="POST" onsubmit="return validateForm()" method="POST" required>
+		{% csrf_token %}
+		<input type="text" name="title" value={{item.title}}>
+		<input type="date" name="date" value={{item.date}}>
+		<input type="submit" value="Update">
+	</form>
+
+
+{% endblock %}

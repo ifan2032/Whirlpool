@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<script src="{% static 'js/main.js' %}"> </script>
+
+
+{% endblock %}
+
+
+{% block content %}
+	<h1> Dates/deadlines </h1>
+
+	<form name="add" action="{% url 'main' %}" onsubmit="return validateForm()" method="POST" required>
+		{% csrf_token %}
+		<input type="text" name="title" placeholder="do homework">
+		<input type="date" name="date">
+		<input type="submit" value="Add Task">
+	</form>
+
+	{% for item in items %}
+		<div id="row_{{item.id}}">
+			<button class="btn" type="submit" id="button1">
+				<a href="{% url 'update' item.id %}"><i class="far fa-edit icon edit_icon"></i></a>
+			</button>
+			<form method="POST" action="delete/{{item.id}}">
+				<button type="submit" class="btn" id="button2">
+					<i class="far fa-trash-alt icon delete_icon" ></i>
+				</button>
+			</form>
+
+			<!--<i class="far fa-trash-alt icon delete_icon" id="{{item.id}}" onclick="submit(this)"></i>-->
+
+
+			<p>{{item}}</p>
+		</div>
+	{% endfor %} 
+			
+{% endblock %}

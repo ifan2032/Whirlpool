@@ -1,3 +1,42 @@
+button{
+    float: left;
+    display: inline-block;
+
+}
+
+form {
+	margin-bottom: 2%;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.edit_icon:hover {
+	color: green;
+}
+
+.delete_icon:hover {
+	color: red;
+}
+
+a, a:hover {
+	outline: none;
+	text-decoration: none;
+	color: inherit;
+}
+
+p {
+	margin-left: 10%;
+}
+
+
 body {
-	background-color: green;
+	margin-left: 5%;
+	font-family: 'Lora', serif;
+	background: url(../assets/wallpaper0.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
